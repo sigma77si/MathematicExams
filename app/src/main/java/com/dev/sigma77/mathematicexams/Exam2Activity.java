@@ -213,6 +213,7 @@ Spinner mySpinner1,mySpinner2,mySpinner3;
         }
         MainActivity.correctAnswersList.add(String.valueOf(probpemCorrectAnswers));
         MainActivity.gamePointsList.add(String.valueOf(problemPoints));
+        MainActivity.playerAnswerList.add(5);
         problemPoints=0;
         probpemCorrectAnswers=0;
     }

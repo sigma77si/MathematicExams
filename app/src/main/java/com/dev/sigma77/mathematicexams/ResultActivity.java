@@ -138,7 +138,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
         int allGamesPoints=mIntent.getIntExtra("AllPoints", 0);
         String stringAllGamePoints= String.valueOf(allGamesPoints);
         allPoints.setText( stringAllGamePoints);
-        populateResults(answers, points, gamesCorrectAnswers);
+        populateResults(answers, points, gamesPoints);
 //        for(int i=0; i < allGamesPoints;i++){
 //            stars[i].setImageResource(R.drawable.gold_star);
 //        }
@@ -161,6 +161,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
 if(gamesPoints.get(i).equals("1")){
     answers[i].setText("V");
     answers[i].setTextColor(Color.GREEN);
+    points[i].setTextColor(Color.GREEN);
     }
             else if(gamesPoints.get(i).equals("0")){
     answers[i].setText("X");

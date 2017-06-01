@@ -173,6 +173,7 @@ public class Competitions_name extends AppCompatActivity implements View.OnClick
        Exam_1Activity.taskNum=0;
         MainActivity.correctAnswersList.clear();
         MainActivity.gamePointsList.clear();
+        MainActivity.playerAnswerList.clear();
         Intent in = new Intent(this, Exam_1Activity.class);
         startActivity(in);
 

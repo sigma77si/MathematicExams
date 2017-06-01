@@ -360,6 +360,9 @@ public class Exam_1Activity extends AppCompatActivity implements View.OnClickLis
                         pic.setImageResource(R.drawable.exam5problem14);
                         layoutButtons.setVisibility(View.INVISIBLE);
                         fab.setVisibility(View.VISIBLE);
+                        MainActivity.correctAnswersList.add(String.valueOf(problemCorrectAnswers));
+                        MainActivity.gamePointsList.add("3");
+                        MainActivity.playerAnswerList.add(5);
                     }
                     else if(taskNum==14){
                         layoutButtons.setVisibility(View.VISIBLE);
@@ -479,6 +482,8 @@ public class Exam_1Activity extends AppCompatActivity implements View.OnClickLis
             }
 if(ResultActivity.isFromResultActivity){
     answerSignal[correctAnswer-1].setBackgroundColor(Color.GREEN);
+   int playerAnswer=MainActivity.playerAnswerList.get(taskNum);
+    answerSignal[playerAnswer-1].setBackgroundColor(Color.RED);
     fab.setVisibility(View.VISIBLE);
     btn1.setClickable(false);
     btn2.setClickable(false);
@@ -531,7 +536,7 @@ else {
             problemCorrectAnswers=0;
             problemPoints=0;
         }
-
+        MainActivity.playerAnswerList.add(answer);
         MainActivity.correctAnswersList.add(String.valueOf(problemCorrectAnswers));
         MainActivity.gamePointsList.add(String.valueOf(problemPoints));
 

@@ -18,8 +18,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public static List<String> correctAnswersList = new ArrayList<>();
     public static List<String> gamePointsList = new ArrayList<>();
+    public static List<Integer>playerAnswerList=new ArrayList<>();
     Button btn,btn2;
     public  static  int examNum;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
