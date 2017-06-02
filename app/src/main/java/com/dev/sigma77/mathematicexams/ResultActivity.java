@@ -289,6 +289,13 @@ if(gamesPoints.get(i).equals("1")){
         startActivity(new Intent(ResultActivity.this, Exam_1Activity.class));
 
     }
+    public void onBackPressed() {
+        // super.onBackPressed();
+        isFromResultActivity=false;
+        finish();
+
+
+    }
 //    @Override
 //    public void onClick(View v) {
 //        if (v.getId() == R.id.btnOk) {

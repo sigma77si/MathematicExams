@@ -360,10 +360,14 @@ public class Exam_1Activity extends AppCompatActivity implements View.OnClickLis
                         pic.setImageResource(R.drawable.exam5problem14);
                         layoutButtons.setVisibility(View.INVISIBLE);
                         fab.setVisibility(View.VISIBLE);
+
                        // MainActivity.correctAnswersList.add(String.valueOf(problemCorrectAnswers));
                         if(!ResultActivity.isFromResultActivity) {
                             MainActivity.gamePointsList.add("3");
-                            MainActivity.playerAnswerList.add(5);
+                            MainActivity.playerAnswerList.add(2);
+                        }
+                        else{
+                            pic.setImageResource(R.drawable.exam5problem14_2);
                         }
                     }
                     else if(taskNum==14){
