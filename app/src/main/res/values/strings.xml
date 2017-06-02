@@ -459,9 +459,9 @@
     <string name="y2016">Великденско 2016</string>
     <string name="y2010">Великденско 2010</string>
     <string name="y2008">Великденско 2008</string>
-    <string name="final_result">Общ резултат :</string>
+    <string name="final_result">Общо верни :</string>
     <string name="problem">Задача</string>
-    <string name="correct">Познати</string>
+    <string name="correct">Верни</string>
     <string name="points">Точки</string>
     <string-array name="spinner_item">
         <item>\?</item>

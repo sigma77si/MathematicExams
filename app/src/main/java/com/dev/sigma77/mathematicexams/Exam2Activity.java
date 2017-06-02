@@ -59,7 +59,7 @@ Spinner mySpinner1,mySpinner2,mySpinner3;
                         if (Exam_1Activity.taskNum >= 14) {
                             Intent in = new Intent(Exam2Activity.this, ResultActivity.class);
 
-                            in.putStringArrayListExtra("GamesCorrectAnswers",(ArrayList<String>)MainActivity.correctAnswersList);
+                           // in.putStringArrayListExtra("GamesCorrectAnswers",(ArrayList<String>)MainActivity.correctAnswersList);
                             in.putStringArrayListExtra("GamesPoints", (ArrayList<String>) MainActivity.gamePointsList);
                             // in.putExtra("AllPoints",result);
                             startActivity(in);

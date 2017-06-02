@@ -22,13 +22,21 @@
         android:layout_height="0dp"
 
         android:id="@+id/imageView"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:background="@drawable/pic_test"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:gravity="center">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2">
+        android:layout_height="wrap_content"
+
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,38 +47,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button5"
-                style="@style/btnStyleGenoa"/>
+                style="@style/btnStyleGenoa"
+                android:textSize="20sp"/>
             <Button
                 android:text="@string/_18_04_2015"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button4"
-                style="@style/btnStyledark_khaki"/>
+                style="@style/btnStyledark_khaki"
+                android:textSize="20sp"/>
             <Button
                 android:text="@string/_12_04_2014"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button3"
-                style="@style/btnStyleBlackpearl"/>
+                style="@style/btnStyleBlackpearl"
+                android:textSize="20sp"/>
 
             <Button
                 android:text="@string/_20_04_2013"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button"
-                style="@style/btnStyleAcapulco"/>
+                style="@style/btnStyleAcapulco"
+                android:textSize="20sp"/>
             <Button
                 android:text="@string/_22_04_2012"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button1"
-                style="@style/btnStyleArsenic"/>
+                style="@style/btnStyleArsenic"
+                android:textSize="20sp"/>
             <Button
                 android:text="@string/_16_04_2011"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button2"
-                style="@style/btnStyleWhiskey"/>
+                style="@style/btnStyleWhiskey"
+                android:textSize="20sp"/>
 
 
 
@@ -79,13 +93,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button6"
-                style="@style/btnStylePaprika"/>
+                style="@style/btnStylePaprika"
+                android:textSize="20sp"/>
             <Button
                 android:text="@string/_12_04_2008"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button7"
-                style="@style/btnStyleOrange"/>
+                style="@style/btnStyleOrange"
+                android:textSize="20sp"/>
             <!--<Button-->
             <!--android:text="Button"-->
             <!--android:layout_width="match_parent"-->
@@ -148,6 +164,6 @@
             <!--style="@style/btnStyleWhiskey"/>-->
         </LinearLayout>
     </ScrollView>
-
+    </LinearLayout>
 
 </LinearLayout>

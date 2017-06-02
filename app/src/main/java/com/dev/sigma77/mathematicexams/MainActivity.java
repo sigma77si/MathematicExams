@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +20,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static List<String> correctAnswersList = new ArrayList<>();
     public static List<String> gamePointsList = new ArrayList<>();
     public static List<Integer>playerAnswerList=new ArrayList<>();
-    Button btn,btn2;
+    Button btn1,btn2;
     public  static  int examNum;
+    ImageView img;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +42,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 ////                        .setAction("Action", null).show();
 //            }
 //        });
+        img= (ImageView) findViewById(R.id.imageView);
+        btn1= (Button) findViewById(R.id.button1);
+        btn1.setOnClickListener(this);
+       img.setOnClickListener(this);
 
-        btn= (Button) findViewById(R.id.button2);
-        btn.setOnClickListener(this);
-        btn2= (Button) findViewById(R.id.button1);
-        btn2.setOnClickListener(this);
+
         fab.setOnClickListener(this);
 
 
@@ -82,7 +86,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 finish();
                      break;
             }
-            case R.id.button2:{
+            case R.id.button1:
+            case R.id.imageView:{
                 startActivity(new Intent(this, Competitions_name.class));
                     break;
             }

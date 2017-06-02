@@ -360,9 +360,11 @@ public class Exam_1Activity extends AppCompatActivity implements View.OnClickLis
                         pic.setImageResource(R.drawable.exam5problem14);
                         layoutButtons.setVisibility(View.INVISIBLE);
                         fab.setVisibility(View.VISIBLE);
-                        MainActivity.correctAnswersList.add(String.valueOf(problemCorrectAnswers));
-                        MainActivity.gamePointsList.add("3");
-                        MainActivity.playerAnswerList.add(5);
+                       // MainActivity.correctAnswersList.add(String.valueOf(problemCorrectAnswers));
+                        if(!ResultActivity.isFromResultActivity) {
+                            MainActivity.gamePointsList.add("3");
+                            MainActivity.playerAnswerList.add(5);
+                        }
                     }
                     else if(taskNum==14){
                         layoutButtons.setVisibility(View.VISIBLE);
@@ -483,7 +485,9 @@ public class Exam_1Activity extends AppCompatActivity implements View.OnClickLis
 if(ResultActivity.isFromResultActivity){
     answerSignal[correctAnswer-1].setBackgroundColor(Color.GREEN);
    int playerAnswer=MainActivity.playerAnswerList.get(taskNum);
-    answerSignal[playerAnswer-1].setBackgroundColor(Color.RED);
+    if(correctAnswer!=playerAnswer) {
+        answerSignal[playerAnswer - 1].setBackgroundColor(Color.RED);
+    }
     fab.setVisibility(View.VISIBLE);
     btn1.setClickable(false);
     btn2.setClickable(false);
@@ -503,9 +507,9 @@ else {
             isEnd=true;
             Intent in = new Intent(this, ResultActivity.class);
 
-            in.putStringArrayListExtra("GamesCorrectAnswers",(ArrayList<String>)MainActivity.correctAnswersList);
+          //  in.putStringArrayListExtra("GamesCorrectAnswers",(ArrayList<String>)MainActivity.correctAnswersList);
             in.putStringArrayListExtra("GamesPoints", (ArrayList<String>) MainActivity.gamePointsList);
-           // in.putExtra("AllPoints",result);
+          //  in.putExtra("AllPoints",result);
             startActivity(in);
           //  new Handler().postDelayed(new ShowResults(this, correctAnswers, currentGamePoints, isEnd), 1500);
            // startActivity(new Intent(Exam_1Activity.this, ResultActivity.class));

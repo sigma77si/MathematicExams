@@ -133,11 +133,11 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         Intent mIntent = getIntent();
-        ArrayList<String> gamesCorrectAnswers = mIntent.getStringArrayListExtra("GamesCorrectAnswers");
+      //  ArrayList<String> gamesCorrectAnswers = mIntent.getStringArrayListExtra("GamesCorrectAnswers");
         ArrayList<String> gamesPoints = mIntent.getStringArrayListExtra("GamesPoints");
-        int allGamesPoints=mIntent.getIntExtra("AllPoints", 0);
-        String stringAllGamePoints= String.valueOf(allGamesPoints);
-        allPoints.setText( stringAllGamePoints);
+      //  int allGamesPoints=mIntent.getIntExtra("AllPoints", 0);
+
+
         populateResults(answers, points, gamesPoints);
 //        for(int i=0; i < allGamesPoints;i++){
 //            stars[i].setImageResource(R.drawable.gold_star);
@@ -157,11 +157,13 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void populateResults(TextView[] answers, TextView[] points, ArrayList<String> gamesPoints) {
+        int allGamesPoints=0;
         for(int i=0; i<gamesPoints.size(); i++){
 if(gamesPoints.get(i).equals("1")){
     answers[i].setText("V");
     answers[i].setTextColor(Color.GREEN);
     points[i].setTextColor(Color.GREEN);
+    allGamesPoints++;
     }
             else if(gamesPoints.get(i).equals("0")){
     answers[i].setText("X");
@@ -179,6 +181,8 @@ if(gamesPoints.get(i).equals("1")){
 //            points[i].setText(gamesPoints.get(i));
 
         }
+        String stringAllGamePoints= String.valueOf(allGamesPoints);
+        allPoints.setText( stringAllGamePoints);
     }
 
 

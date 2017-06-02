@@ -47,7 +47,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:id="@+id/problemText2"
-                        android:textSize="20sp"
+                        android:textSize="35sp"
                         android:background="@drawable/btn_style_acapulco"/>
                 </LinearLayout>
                 <ImageView
@@ -183,21 +183,24 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/text1"
                 android:layout_weight="1"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textSize="25sp"/>
             <TextView
                 android:text="TextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/text2"
                 android:layout_weight="1"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textSize="25sp"/>
             <TextView
                 android:text="TextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/text3"
                 android:layout_weight="1"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textSize="25sp"/>
 
         </LinearLayout>
 
