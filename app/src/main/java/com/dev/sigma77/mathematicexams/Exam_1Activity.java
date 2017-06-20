@@ -315,14 +315,19 @@ public class Exam_1Activity extends AppCompatActivity implements View.OnClickLis
                         Exam2Activity.textToLoad2="Зайче 2";
                         Exam2Activity.textToLoad3="Зайче 3";
 
-                        Handler handler=new Handler();
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                taskNum++;
-                                setNewTask(taskNum);
-                            }
-                        },1500);
+                        if(ResultActivity.isFromResultActivity){
+                            finish();
+                        }
+                        else {
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    taskNum++;
+                                    setNewTask(taskNum);
+                                }
+                            }, 1500);
+                        }
 
 
                     }
@@ -340,14 +345,19 @@ public class Exam_1Activity extends AppCompatActivity implements View.OnClickLis
                         Exam2Activity.textToLoad2="Таня";
                         Exam2Activity.textToLoad3="Мира";
 
-                        Handler handler=new Handler();
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                taskNum++;
-                                setNewTask(taskNum);
-                            }
-                        },1500);
+                        if(ResultActivity.isFromResultActivity){
+                            finish();
+                        }
+                        else {
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    taskNum++;
+                                    setNewTask(taskNum);
+                                }
+                            }, 1500);
+                        }
 
 
                     }
@@ -368,6 +378,7 @@ public class Exam_1Activity extends AppCompatActivity implements View.OnClickLis
                         }
                         else{
                             pic.setImageResource(R.drawable.exam5problem14_2);
+                            answerText.setText("По 16 от двата вида");
                         }
                     }
                     else if(taskNum==14){
@@ -383,16 +394,19 @@ public class Exam_1Activity extends AppCompatActivity implements View.OnClickLis
                         Exam2Activity.textToLoad1="Асен";
                         Exam2Activity.textToLoad2="Боян";
                         Exam2Activity.textToLoad3="Васил";
-
-                        Handler handler=new Handler();
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                taskNum++;
-                                setNewTask(taskNum);
-                            }
-                        },1500);
-
+                        if(ResultActivity.isFromResultActivity){
+                            finish();
+                        }
+                        else {
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    taskNum++;
+                                    setNewTask(taskNum);
+                                }
+                            }, 1500);
+                        }
 
                     }
 

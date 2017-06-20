@@ -43,6 +43,8 @@ Spinner mySpinner1,mySpinner2,mySpinner3;
          fab = (FloatingActionButton) findViewById(R.id.fab);
         if(ResultActivity.isFromResultActivity){
             fab.setImageDrawable(ContextCompat.getDrawable(Exam2Activity.this, R.drawable.next_icon));
+
+
         }
         else {
         fab.setImageDrawable(ContextCompat.getDrawable(Exam2Activity.this, R.drawable.check_icon));
@@ -213,7 +215,7 @@ Spinner mySpinner1,mySpinner2,mySpinner3;
         }
         MainActivity.correctAnswersList.add(String.valueOf(probpemCorrectAnswers));
         MainActivity.gamePointsList.add(String.valueOf(problemPoints));
-        MainActivity.playerAnswerList.add(5);
+        MainActivity.playerAnswerList.add(1);
         problemPoints=0;
         probpemCorrectAnswers=0;
     }

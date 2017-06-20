@@ -7,6 +7,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -54,61 +56,69 @@ public class Competitions_name extends AppCompatActivity implements View.OnClick
         btn7.setOnClickListener(this);
         btn8.setOnClickListener(this);
     }
-    public void showAlertDialog(){
 
-        final AlertDialog.Builder alertDialog=new AlertDialog.Builder(Competitions_name.this);
-        View myview = getLayoutInflater().inflate(R.layout.exit_dialog,null);
-        Button no = (Button) myview.findViewById(R.id.btn_no);
-        Button yes = (Button) myview.findViewById(R.id.btn_yes);
-        no.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                    final Toast toast = Toast.makeText(Competitions_name.this, "Yes", Toast.LENGTH_SHORT);
-                    toast.show();
-                dialog.dismiss();
-            }
-
-
-        });
-        yes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                finish();
-                final Toast toast = Toast.makeText(Competitions_name.this, "Изход от \"Математически състезания \"", Toast.LENGTH_SHORT);
-                toast.show();}
-
-
-        });
-        alertDialog.setView(myview);
-
-        alertDialog.setTitle(R.string.exit);
-//        alertDialog.setMessage(R.string.do_you_want_exit_app);
-//        alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//       finish();
-//            }
-//        });
-//        alertDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//
-//            }
-//        });
-           dialog= alertDialog.create();
-           dialog.show();
-
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_competitions_name, menu);
+        return true;
     }
 
     @Override
-    public void onBackPressed() {
-       // super.onBackPressed();
-        showAlertDialog();
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+//    public void showAlertDialog(){
+//
+//        final AlertDialog.Builder alertDialog=new AlertDialog.Builder(Competitions_name.this);
+//        View myview = getLayoutInflater().inflate(R.layout.exit_dialog,null);
+//        Button no = (Button) myview.findViewById(R.id.btn_no);
+//        Button yes = (Button) myview.findViewById(R.id.btn_yes);
+//        no.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+////                    final Toast toast = Toast.makeText(Competitions_name.this, "Yes", Toast.LENGTH_SHORT);
+////                    toast.show();
+//                dialog.dismiss();
+//            }
+//
+//
+//        });
+//        yes.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                finish();
+//                final Toast toast = Toast.makeText(Competitions_name.this, "Изход от \"Математически състезания \"", Toast.LENGTH_SHORT);
+//                toast.show();}
+//
+//
+//        });
+//        alertDialog.setView(myview);
+//        alertDialog.setTitle(R.string.exit);
+//           dialog= alertDialog.create();
+//           dialog.show();
+//
+//
+//    }
+
+    @Override
+    public void onBackPressed() {
+//       // super.onBackPressed();
+//        showAlertDialog();
+finish();
 
     }
 
