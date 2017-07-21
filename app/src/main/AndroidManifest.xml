@@ -23,11 +23,11 @@
             android:name=".Exam_1Activity"
             android:label="@string/title_activity_exam_1"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" >
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".Competitions_name" />
-    </activity>
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Competitions_name" />
+        </activity>
         <activity
             android:name=".ResultActivity"
             android:label="@string/title_activity_result"
@@ -38,9 +38,9 @@
             android:label="@string/title_activity_competitions_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Exam2Activity"
@@ -50,9 +50,17 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Competitions_name" />
-
-
         </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
